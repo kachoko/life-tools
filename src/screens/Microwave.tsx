@@ -40,16 +40,18 @@ function MicrowaveComponent() {
 			<section>
 				<form>
 					<p>あなたが使用している電子レンジのWは？</p>
-					<TextField label="使うレンジのW数" type="tel" value={wat} onChange={(e) => {setWat(e.target.value)}} onBlur={setToStorage} />
+					<TextField label="使うレンジのW数" variant="filled" type="tel" value={wat} onChange={(e) => {setWat(e.target.value)}} onBlur={setToStorage} />
 				</form>
 
 				<form>
 					<p>変換したい元のWと時間は？</p>
-					<TextField label="変換したいW数" type="tel" value={originWat} onChange={(e) => {setOriginWat(e.target.value)}} />
-					<TextField label="分" type="tel" value={originMinute} onChange={(e) => {setOriginMinute(e.target.value)}} />
-					<TextField label="秒" type="tel" value={originSecond} onChange={(e) => {setOriginSecond(e.target.value)}} />
+					<TextField label="変換したいW数" variant="filled" type="tel" value={originWat} onChange={(e) => {setOriginWat(e.target.value)}} />
 					<div>
-						<Button color="primary" onClick={calcResult}>変換する</Button>
+						<TextField label="分" variant="filled" type="tel" value={originMinute} onChange={(e) => {setOriginMinute(e.target.value)}} />{' '}
+						<TextField label="秒" variant="filled" type="tel" value={originSecond} onChange={(e) => {setOriginSecond(e.target.value)}} />
+					</div>
+					<div>
+						<Button color="primary" variant="contained" onClick={calcResult}>変換する</Button>
 					</div>
 				</form>
 			</section>
@@ -62,6 +64,7 @@ function MicrowaveComponent() {
 			{/* <div style={{ padding: 30 }}>
 				<Button color="secondary">Hello World</Button>
 			</div> */}
+			<span>計算結果はあくまで目安として利用してください。</span>
 		</main>
 	);
 }
