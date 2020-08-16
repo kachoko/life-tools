@@ -1,0 +1,20 @@
+@import "./ColorPallete.scss";
+
+.app-header {
+    display: flex;
+    color: $Black;
+    background-color: $Blue_50;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $Blue_900;
+    .header-item:nth-child(1) {
+        padding-left: 10px;
+    }
+    .header-item:nth-child(2) {
+        flex-grow: 1;
+        text-align: center;
+    }
+    .header-item:nth-child(3) {
+        padding-right: 10px;
+    }
+}
