@@ -1,4 +1,8 @@
-# REACH
+# LifeToolApp
 
-旧rdrリポジトリをtypescriptに対応したもので作り直そう作戦。
-UI側のみ。
+## 開発
+
+```zsh
+% npm i
+% npm run start
+```
