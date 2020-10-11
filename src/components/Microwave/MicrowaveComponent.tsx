@@ -56,15 +56,15 @@ function MicrowaveComponent() {
 							<form>
 								<section>
 									{/* <div className="question-title">
-								<span>使用レンジW入力</span>
-							</div> */}
-									<div className="question-contents">
+										<span>使用レンジW入力</span>
+									</div> */}
+									<div className={styles["question-contents"]}>
 										<TextField className={styles["input-wat"]} label="使うレンジのW" variant="standard" type="tel" value={wat} onChange={(e) => { setWat(e.target.value) }} onBlur={setToStorage} />
 									</div>
 									{/* <div className="question-title">
-								<span>変換したい元のWと時間</span>
-							</div> */}
-									<div className="question-contents">
+										<span>変換したい元のWと時間</span>
+									</div> */}
+									<div className={styles["question-contents"]}>
 										<Grid>
 											<TextField className={styles["input-wat"]} label="変換したいW" variant="standard" type="tel" value={originWat} onChange={(e) => { setOriginWat(e.target.value) }} />
 										</Grid>
